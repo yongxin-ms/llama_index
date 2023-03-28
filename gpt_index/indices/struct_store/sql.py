@@ -74,8 +74,8 @@ class GPTSQLStructStoreIndex(BaseGPTStructStoreIndex[SQLStructTable]):
         self._table_name = table_name
         self._table = table
 
-        # if documents aren't specified, pass in a blank []
-        documents = documents or []
+        if index_struct is None:
+            documents = documents or []
 
         super().__init__(
             documents=documents,
@@ -128,7 +128,7 @@ class GPTSQLStructStoreIndex(BaseGPTStructStoreIndex[SQLStructTable]):
         data_extractor.insert_datapoint_from_document(document)
 
     @classmethod
-    def get_query_map(self) -> Dict[str, Type[BaseGPTIndexQuery]]:
+    def get_query_map(cls) -> Dict[str, Type[BaseGPTIndexQuery]]:
         """Get query map."""
         return {
             QueryMode.DEFAULT: GPTNLStructStoreIndexQuery,

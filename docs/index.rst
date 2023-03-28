@@ -10,11 +10,13 @@ LlamaIndex (GPT Index) is a project that provides a central interface to connect
 
    ⚠️ **NOTE**: We are rebranding GPT Index as LlamaIndex! We will carry out this transition gradually.
 
+   **3/20/2023**: Most instances of `gpt_index` should be renamed to `llama_index`. We will preserve the name "GPT Index" as a backup name for now.
+
    **2/19/2023**: By default, our docs/notebooks/instructions now use the `llama-index` package. However the `gpt-index` package still exists as a duplicate!
 
    **2/16/2023**: We have a duplicate `llama-index` pip package. Simply replace all imports of `gpt_index` with `llama_index` if you choose to `pip install llama-index`.
 
-- Github: https://github.com/jerryjliu/gpt_index
+- Github: https://github.com/jerryjliu/llama_index
 - PyPi:
    - LlamaIndex: https://pypi.org/project/llama-index/.
    - GPT Index (duplicate): https://pypi.org/project/gpt-index/.
@@ -67,6 +69,8 @@ That's where the **LlamaIndex** comes in. LlamaIndex is a simple, flexible inter
    guides/use_cases.md
    guides/index_guide.md
    guides/sql_guide.md
+   guides/fullstack_app_guide.md
+   guides/building_a_chatbot.md
 
 
 .. toctree::
@@ -78,10 +82,12 @@ That's where the **LlamaIndex** comes in. LlamaIndex is a simple, flexible inter
    how_to/update.md
    how_to/cost_analysis.md
    how_to/embeddings.md
-   how_to/vector_stores.md
    how_to/custom_prompts.md
    how_to/custom_llms.md
-   how_to/using_with_langchain.md
+   how_to/query_transformations.md
+   how_to/output_parsing.md
+   how_to/optimizers.md
+   how_to/integrations.rst
 
 
 .. toctree::
@@ -98,6 +104,7 @@ That's where the **LlamaIndex** comes in. LlamaIndex is a simple, flexible inter
    reference/embeddings.rst
    reference/struct_store.rst
    reference/response.rst
+   reference/optimizers.rst
    reference/playground.rst
    reference/example_notebooks.rst
    reference/langchain_integrations/base.rst
